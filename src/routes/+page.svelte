@@ -1,2 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="title p-3 is-flex">
+  <i style="font-size: 48px;" class="fas fa-map-marked-alt"></i>
+  <div class="ml-4">Placemark</div>
+</div>
