@@ -11,6 +11,7 @@
   async function login() {
     const success = true;
     if (success) {
+      loggedInUser.email = email;
       goto("/event");
     } else {
       email = "";
