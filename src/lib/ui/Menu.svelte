@@ -6,9 +6,8 @@
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/dashboard">
-        <span class="icon"> <i class="fas fa-map-marker-alt"></i></span><span class="icon mr-1">
-          <i class="far fa-money-bill-alt"></i></span
-        ><span><strong>Donation</strong> </span>
+        <i class="fas fa-map-marked-alt mr-2"></i>
+        <strong>Placemark</strong>
       </a>
     </div>
     <div id="navbarMenu" class="navbar-menu">
