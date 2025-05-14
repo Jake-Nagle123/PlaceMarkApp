@@ -10,7 +10,7 @@
   async function login() {
     const success = false;
     if (success) {
-      goto("/event");
+      goto("/dashboard");
     } else {
       message = "Error Trying to login";
     }
