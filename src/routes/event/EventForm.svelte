@@ -1,4 +1,6 @@
 <script lang="ts">
+import Coordinates from "$lib/ui/Coordinates.svelte";
+
   const stadiumList = [
     {
      ground: "Aviva Stadium",
@@ -27,10 +29,13 @@
   let selectedStadium = $state("Walsh Park");
   let sportMethods = ["Hurling", "Football", "Soccer", "Rugby"];
   let selectedSport = $state("Hurling");
+  let latitude = $state(52.160858);
+  let longitude = $state(-7.15242);
+
 
   async function addEvent() {
     console.log(`Just added: ${selectedStadium} to ${sportMethods} which cost ${amount}`);
-    console.log(`lat: ${lat}, lng: ${lng}`);
+    console.log(`lat: ${latitude}, lng: ${longitude}`);
   }
 </script>
 
@@ -56,7 +61,7 @@
 
   <div class="field">
     <label class="label" for="rating">Enter Rating:</label>
-    <input class="input" id="rating" name="rating" type="text" />
+    <input class="input" id="rating" name="rating" type="float" />
   </div>
 
   <div class="field">
@@ -74,4 +79,5 @@
       <button onclick={() => addEvent()} class="button is-success is-fullwidth">Submit</button>
     </div>
   </div>
+  <Coordinates bind:latitude bind:longitude />
 </div>
