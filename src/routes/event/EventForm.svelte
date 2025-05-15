@@ -29,6 +29,7 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
   let selectedStadium = $state("Walsh Park");
   let sportMethods = ["Hurling", "Football", "Soccer", "Rugby"];
   let selectedSport = $state("Hurling");
+  let city = $state(""); 
   let latitude = $state(52.160858);
   let longitude = $state(-7.15242);
 
@@ -47,14 +48,14 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
 
   <div class="field">
     <label class="label" for="city">Enter County:</label>
-    <input class="input" id="city" name="city" type="text" />
+    <input bind:value={city} class="input" id="city" name="city" type="text" />
   </div>
 
   <div class="field">
     <div class="control">
       <label class="label" for="sport">Select Sport:</label>
       {#each sportMethods as method}
-        <input class="radio" type="radio" value={method} /> {method}
+        <input class="radio" name="sport" type="radio" value={method} /> {method}
       {/each}
     </div>
   </div>
