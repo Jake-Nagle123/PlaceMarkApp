@@ -75,10 +75,10 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
       </select>
     </div>
   </div>
+  <Coordinates bind:latitude bind:longitude />
   <div class="field">
     <div class="control">
       <button onclick={() => addEvent()} class="button is-success is-fullwidth">Submit</button>
     </div>
   </div>
-  <Coordinates bind:latitude bind:longitude />
 </div>
