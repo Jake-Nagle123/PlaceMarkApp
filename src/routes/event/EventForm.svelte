@@ -66,7 +66,7 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
   </div>
 
   <div class="field">
-    <label class="label" for="stadium">Select County:</label>
+    <label class="label" for="stadium">Select Stadium:</label>
     <div class="select">
       <select bind:value={selectedStadium}>
         {#each stadiumList as stadium}
