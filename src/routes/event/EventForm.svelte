@@ -55,7 +55,7 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
     <div class="control">
       <label class="label" for="sport">Select Sport:</label>
       {#each sportMethods as method}
-        <input class="radio" name="sport" type="radio" value={method} /> {method}
+        <input bind:group={selectedSport} class="radio" type="radio" value={method} /> {method}
       {/each}
     </div>
   </div>
@@ -68,7 +68,7 @@ import Coordinates from "$lib/ui/Coordinates.svelte";
   <div class="field">
     <label class="label" for="stadium">Select County:</label>
     <div class="select">
-      <select bind:value={selectedSport}>
+      <select bind:value={selectedStadium}>
         {#each stadiumList as stadium}
           <option>{stadium.ground}</option>
         {/each}
