@@ -12,7 +12,7 @@
     const success = true;
     if (success) {
       loggedInUser.email = email;
-      goto("/event");
+      goto("/dashboard");
     } else {
       email = "";
       password = "";
